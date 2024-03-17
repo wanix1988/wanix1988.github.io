@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>difference_between___stdcall___cdcel___fastcall | SmallTalk</title>
+  <meta name="author" content="wanix1988">
+  
+  <meta name="description" content="Wanglinwei&#39;s Blog">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="difference_between___stdcall___cdcel___fastcall">
+  <meta property="og:site_name" content="SmallTalk">
+
+  
+    <meta property="og:image" content>
+  
+
+  
+  
+    <link href="/pages/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/pages/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/pages/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/pages/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/pages/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/pages/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/pages/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/pages/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+</html>
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/pages/">SmallTalk</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/pages/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/pages/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/pages/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/pages/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/pages/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> difference_between___stdcall___cdcel___fastcall</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="stdcall、cdcel和-fastcall三者的区别"><a href="#stdcall、cdcel和-fastcall三者的区别" class="headerlink" title="stdcall、cdcel和__fastcall三者的区别"></a><strong>stdcall、</strong>cdcel和__fastcall三者的区别</h1><p><strong>stdcall、</strong>cdecl和__fastcall是三种函数调用协议，函数调用协议会影响函数参数的入栈方式、栈内数据的清除方式、编译器函数名的修饰规则等。</p>
+<h2 id="调用协议常用场合"><a href="#调用协议常用场合" class="headerlink" title="调用协议常用场合"></a>调用协议常用场合</h2><ol>
+<li>__stdcall：Windows API默认的函数调用协议。</li>
+<li>__cdecl：C/C++默认的函数调用协议。</li>
+<li>__fastcall：适用于对性能要求较高的场合。</li>
+</ol>
+<h2 id="函数参数入栈方式"><a href="#函数参数入栈方式" class="headerlink" title="函数参数入栈方式"></a>函数参数入栈方式</h2><ol>
+<li>__stdcall：函数参数由右向左入栈。</li>
+<li>__cdecl：函数参数由右向左入栈。</li>
+<li>__fastcall：从左开始不大于4字节的参数放入CPU的ECX和EDX寄存器，其余参数从右向左入栈。</li>
+</ol>
+<p>问题一：__fastcall在寄存器中放入不大于4字节的参数，故性能较高，适用于需要高性能的场合。</p>
+<h2 id="栈内数据清除方式"><a href="#栈内数据清除方式" class="headerlink" title="栈内数据清除方式"></a>栈内数据清除方式</h2><ol>
+<li>__stdcall：函数调用结束后由被调用函数清除栈内数据。</li>
+<li>__cdecl：函数调用结束后由函数调用者清除栈内数据。</li>
+<li>__fastcall：函数调用结束后由被调用函数清除栈内数据。<blockquote>
+<p>问题一：不同编译器设定的栈结构不尽相同，跨开发平台时由函数调用者清除栈内数据不可行。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>问题二：某些函数的参数是可变的，如printf函数，这样的函数只能由函数调用者清除栈内数据。</p>
+</blockquote>
+<blockquote>
+<p>问题三：由调用者清除栈内数据时，每次调用都包含清除栈内数据的代码，故可执行文件较大。</p>
+</blockquote>
+<h2 id="C语言编译器函数名称修饰规则"><a href="#C语言编译器函数名称修饰规则" class="headerlink" title="C语言编译器函数名称修饰规则"></a>C语言编译器函数名称修饰规则</h2><ol>
+<li>__stdcall：编译后，函数名被修饰为“_functionname@number”。</li>
+<li>__cdecl：编译后，函数名被修饰为“_functionname”。</li>
+<li>__fastcall：编译后，函数名给修饰为“@functionname@nmuber”。</li>
+</ol>
+<blockquote>
+<p>注：“functionname”为函数名，“number”为参数字节数。</p>
+</blockquote>
+<blockquote>
+<p>注：函数实现和函数定义时如果使用了不同的函数调用协议，则无法实现函数调用。</p>
+</blockquote>
+<h2 id="C-语言编译器函数名称修饰规则"><a href="#C-语言编译器函数名称修饰规则" class="headerlink" title="C++语言编译器函数名称修饰规则"></a>C++语言编译器函数名称修饰规则</h2><ol>
+<li>__stdcall：编译后，函数名被修饰为“?functionname@@YG<strong>**</strong>@Z”。</li>
+<li>__cdecl：编译后，函数名被修饰为“?functionname@@YA<strong>**</strong>@Z”。</li>
+<li>__fastcall：编译后，函数名被修饰为“?functionname@@YI<strong>**</strong>@Z”。</li>
+</ol>
+<blockquote>
+<p>注：“<strong>**</strong>”为函数返回值类型和参数类型表。</p>
+</blockquote>
+<blockquote>
+<p>注：函数实现和函数定义时如果使用了不同的函数调用协议，则无法实现函数调用。</p>
+</blockquote>
+<p>C语言和C++语言间如果不进行特殊处理，也无法实现函数的互相调用。</p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a href="/pages/2018/11/13/debug-linux-kernel-with-virtualbox/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    
+
+    <a href="/pages/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/pages/2018/06/12/Running-Arm64-Linux-Kernel-in-Qemu/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-08-12 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/pages/tags/C-C/">C/C++<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2024 wanix1988
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/pages/js/jquery.imagesloaded.min.js"></script>
+<script src="/pages/js/gallery.js"></script>
+<script src="/pages/js/bootstrap.min.js"></script>
+<script src="/pages/js/main.js"></script>
+<script src="/pages/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/pages/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/pages/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/pages/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
