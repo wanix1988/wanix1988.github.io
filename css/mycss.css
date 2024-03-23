@@ -1,0 +1,34 @@
+/* 页脚footer */
+#footer {
+  /* 与背景渐变效果一致*/
+  background-image: linear-gradient(
+    -225deg,
+    #d6badf 0%,
+    #b8dcff 28%,
+    #58abf3 100%
+  );
+}
+
+#footer:before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (min-width: 768px) {
+  #doraemon_to_top {
+    position: fixed;
+    z-index: 1001;
+    right: 30px;
+    transition: 0.3s;
+    opacity: 0;
+    bottom: -187px;
+    transform: scale(1);
+  }
+  #doraemon_to_top.doraemon_fixed {
+    bottom: -51px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  #doraemon_to_top.doraemon_fixed:hover {
+    transform: scale(0.95);
+  }
+}

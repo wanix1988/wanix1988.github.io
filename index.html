@@ -1,640 +1,231 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
-  
-  <title>SmallTalk</title>
-  <meta name="author" content="wanix1988">
-  
-  <meta name="description" content="Wanglinwei&#39;s Blog">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>SmallTalk - Stay Hungry, Stay Foolish.</title><meta name="author" content="wanix1988"><meta name="copyright" content="wanix1988"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Wanglinwei&#39;s Blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SmallTalk">
+<meta property="og:url" content="https://wanix1988.github.io/index.html">
+<meta property="og:site_name" content="SmallTalk">
+<meta property="og:description" content="Wanglinwei&#39;s Blog">
+<meta property="og:locale">
+<meta property="og:image" content="https://wanix1988.github.io/img/avatar.png">
+<meta property="article:author" content="wanix1988">
+<meta property="article:tag" content="Computer,Programming,Math,Machine Learning,Deap Learning">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wanix1988.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://wanix1988.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'SmallTalk',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-03-23 13:44:55'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-  
-  <meta property="og:site_name" content="SmallTalk"/>
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-  
-    <meta property="og:image" content=""/>
-  
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="SmallTalk" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="SmallTalk"><img class="site-icon" src="/img/avatar.png"/><span class="site-name">SmallTalk</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">SmallTalk</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/wanix1988" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:wanix1988@gmail.com" target="_blank" title="Email"><i class="fab fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://twitter.com/wanglinwei88" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/" title="Pairing devices over Wi-Fi in Android">Pairing devices over Wi-Fi in Android</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-17T12:36:44.000Z" title="Created 2024-03-17 20:36:44">2024-03-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Android/">Android</a></span></div><div class="content">Android使用Wi-Fi配对的原理和实现原理Android Studio中插件实现的原理
+源码
 
-  
-  
-    <link href="/favicon.png" rel="icon">
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+https://cs.android.com/android-studio/platform/tools/adt/idea/+/mirror-goog-studio-master-dev:android-adb/src/com/android/tools/idea/adb/wireless/WiFiPairingServiceImpl.kt
 
-  <script src="/js/jquery-2.0.3.min.js"></script>
+重点函数说明
+ 2.1 检查adb mdns的支持状况
+ 123456789101112131415161718192021222324252627282930313233343536override fun checkMdnsSupport(): ListenableFuture&lt;MdnsSupportState&gt; &#123;    // TODO: Investigate updating (then using) ddmlib instead of spawning an adb client command, so that ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/12/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-12T04:56:08.308Z" title="Created 2024-03-12 12:56:08">2024-03-12</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+More info: Writing
+Run server1$ hexo server
+More info: Server
+Generate static files1$ hexo generate
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2018/12/04/Debug-Linux-Kernel-With-KGDB/" title="Debug Linux Kernel With KGDB">Debug Linux Kernel With KGDB</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2018-12-04T03:30:00.000Z" title="Created 2018-12-04 11:30:00">2018-12-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/kernel/">kernel</a></span></div><div class="content">使用KGDB调试Linux Kernel(20181114)
+Grub启动命令行中添加kgdboc=ttyS0,115200 kgdbwait nokaslra) rodata=off   
 
-  <!-- analytics -->
-  
+这条好像没什么用？待验证  
 
+b)必须添加nokaslr，否则vmlinux符号会对不上，无法正常显示debug信息和下断点
 
+使用socat做转发a) sudo socat -d -d /tmp/vboxsock PTY
 
-<meta name="generator" content="Hexo 7.1.1"></head>
-
- <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">SmallTalk</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class="fa fa-archive"></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class="fa fa-folder"></i>Categories
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/tags" title="All the tags.">
-			  <i class="fa fa-tags"></i>Tags
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class="fa fa-user"></i>About
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/atom.xml" title="Subscribe me.">
-			  <i class="fa fa-user"></i>RSS
-			</a>
-		  </li>
-		  
-		</ul>
-      </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
-
-  <div class="container">
-  	<div class="content">
-    	 <div class="page-header logo">
-  <h1>Stay Hungry, Stay Foolish.<span class="blink-fast">∎</span></h1>
-</div>
-
-<div class="row page">
-
-	
-	<div class="col-md-9">
-	
-
-		<div class="slogan">
-      <i class="fa fa-heart blink-slow"></i>
-      Keep and carry on.
-</div>    
-		<div id="top_search"></div>
-		<div class="mypage">
-		
-		<!-- title and entry -->
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/" >Pairing devices over Wi-Fi in Android</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2024-03-17
-			
-		</div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="Android使用Wi-Fi配对的原理和实现"><a href="#Android使用Wi-Fi配对的原理和实现" class="headerlink" title="Android使用Wi-Fi配对的原理和实现"></a>Android使用Wi-Fi配对的原理和实现</h1><h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h2 id="Android-Studio中插件实现的原理"><a href="#Android-Studio中插件实现的原理" class="headerlink" title="Android Studio中插件实现的原理"></a>Android Studio中插件实现的原理</h2><ol>
-<li>源码</li>
-</ol>
-<p><a href="https://cs.android.com/android-studio/platform/tools/adt/idea/+/mirror-goog-studio-master-dev:android-adb/src/com/android/tools/idea/adb/wireless/WiFiPairingServiceImpl.kt">https://cs.android.com/android-studio/platform/tools/adt/idea/+/mirror-goog-studio-master-dev:android-adb/src/com/android/tools/idea/adb/wireless/WiFiPairingServiceImpl.kt</a></p>
-<ol start="2">
-<li><p>重点函数说明</p>
-<p> 2.1 检查adb mdns的支持状况</p>
- <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">checkMdnsSupport</span><span class="params">()</span></span>: ListenableFuture&lt;MdnsSupportState&gt; &#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> Investigate updating (then using) ddmlib instead of spawning an adb client command, so that</span></span><br><span class="line">    <span class="comment">//       we don&#x27;t have to rely on parsing command line output</span></span><br><span class="line">    LOG.info(<span class="string">&quot;Checking if mDNS is supported (`adb mdns check` command)&quot;</span>)</span><br><span class="line">    <span class="keyword">val</span> futureResult = adbService.executeCommand(listOf(<span class="string">&quot;mdns&quot;</span>, <span class="string">&quot;check&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> futureResult.transform(taskExecutor) &#123; result -&gt;</span><br><span class="line">    <span class="keyword">when</span> &#123;</span><br><span class="line">        result.errorCode != <span class="number">0</span> -&gt; &#123;</span><br><span class="line">        LOG.warn(<span class="string">&quot;`adb mdns check` returned a non-zero error code (<span class="subst">$&#123;result.errorCode&#125;</span>)&quot;</span>)</span><br><span class="line">        <span class="keyword">val</span> isUnknownCommand = result.stderr.any &#123; line -&gt; line.contains(Regex(<span class="string">&quot;unknown.*command&quot;</span>)) &#125;</span><br><span class="line">        <span class="keyword">if</span> (isUnknownCommand)</span><br><span class="line">            MdnsSupportState.AdbVersionTooLow</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            MdnsSupportState.AdbInvocationError</span><br><span class="line">        &#125;</span><br><span class="line">        result.stdout.isEmpty() -&gt; &#123;</span><br><span class="line">        LOG.warn(<span class="string">&quot;`adb mdns check` returned an empty output (why?)&quot;</span>)</span><br><span class="line">        MdnsSupportState.AdbInvocationError</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// See https://android-review.googlesource.com/c/platform/system/core/+/1274009/5/adb/client/transport_mdns.cpp#553</span></span><br><span class="line">        result.stdout.any &#123; it.contains(<span class="string">&quot;mdns daemon version&quot;</span>) &#125; -&gt; &#123;</span><br><span class="line">        MdnsSupportState.Supported</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> -&gt; &#123;</span><br><span class="line">        MdnsSupportState.NotSupported</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;.catching(taskExecutor, Throwable::<span class="keyword">class</span>.java) &#123; t -&gt;</span><br><span class="line">    LOG.warn(<span class="string">&quot;Error executing `adb mdns check`&quot;</span>, t)</span><br><span class="line">    MdnsSupportState.AdbInvocationError</span><br><span class="line">    &#125;.transform(taskExecutor) &#123; supportState -&gt;</span><br><span class="line">    <span class="comment">// This `tansform` is just for logging purposes</span></span><br><span class="line">    LOG.info(<span class="string">&quot;Checking if mDNS is supportState result: <span class="subst">$&#123;supportState&#125;</span>&quot;</span>)</span><br><span class="line">    supportState</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 2.2 adb mdns services列出支持mdns的设备</p>
- <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">scanMdnsServices</span><span class="params">()</span></span>: ListenableFuture&lt;List&lt;MdnsService&gt;&gt; &#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> Investigate updating (then using) ddmlib instead of spawning an adb client command, so that</span></span><br><span class="line">    <span class="comment">//       we don&#x27;t have to rely on parsing command line output</span></span><br><span class="line">    <span class="keyword">val</span> futureResult = adbService.executeCommand(listOf(<span class="string">&quot;mdns&quot;</span>, <span class="string">&quot;services&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> futureResult.transform(taskExecutor) &#123; result -&gt;</span><br><span class="line">    <span class="comment">// Output example:</span></span><br><span class="line">    <span class="comment">//  List of discovered mdns services</span></span><br><span class="line">    <span class="comment">//  adb-939AX05XBZ-vWgJpq	_adb-tls-connect._tcp.	192.168.1.86:39149</span></span><br><span class="line">    <span class="comment">//  adb-939AX05XBZ-vWgJpq	_adb-tls-pairing._tcp.	192.168.1.86:37313</span></span><br><span class="line">    <span class="comment">// Regular expression</span></span><br><span class="line">    <span class="comment">//  adb-&lt;everything-until-space&gt;&lt;spaces&gt;__adb-tls-pairing._tcp.&lt;spaces&gt;&lt;everything-until-colon&gt;:&lt;port&gt;</span></span><br><span class="line">    <span class="keyword">val</span> lineRegex = Regex(<span class="string">&quot;([^\\t]+)\\t*_adb-tls-pairing._tcp.\\t*([^:]+):([0-9]+)&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (result.errorCode != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> AdbCommandException(<span class="string">&quot;Error discovering services&quot;</span>, result.errorCode, result.stderr)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (result.stdout.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">throw</span> AdbCommandException(<span class="string">&quot;Empty output from \&quot;adb mdns services\&quot; command&quot;</span>, -<span class="number">1</span>, result.stderr)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span><span class="symbol">@transform</span> result.stdout</span><br><span class="line">        .drop(<span class="number">1</span>)</span><br><span class="line">        .mapNotNull &#123; line -&gt;</span><br><span class="line">        <span class="keyword">val</span> matchResult = lineRegex.find(line)</span><br><span class="line">        matchResult?.let &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">val</span> serviceName = it.groupValues[<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">val</span> ipAddress = InetAddress.getByName(it.groupValues[<span class="number">2</span>])</span><br><span class="line">            <span class="keyword">val</span> port = it.groupValues[<span class="number">3</span>].toInt()</span><br><span class="line">            <span class="keyword">val</span> serviceType = <span class="keyword">if</span> (serviceName.startsWith(studioServiceNamePrefix)) ServiceType.QrCode <span class="keyword">else</span> ServiceType.PairingCode</span><br><span class="line">            MdnsService(serviceName, serviceType, ipAddress, port)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (ignored: Exception) &#123;</span><br><span class="line">            LOG.warn(<span class="string">&quot;mDNS service entry ignored due do invalid characters: <span class="subst">$&#123;line&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="literal">null</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 2.3 adb pair ipAddr:port password，用来配对PC和Android手机</p>
- <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">pairMdnsService</span><span class="params">(mdnsService: <span class="type">MdnsService</span>, password: <span class="type">String</span>)</span></span>: ListenableFuture&lt;PairingResult&gt; &#123;</span><br><span class="line">    LOG.info(<span class="string">&quot;Start mDNS pairing: <span class="subst">$&#123;mdnsService&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> deviceAddress = <span class="string">&quot;<span class="subst">$&#123;mdnsService.ipAddress.hostAddress&#125;</span>:<span class="subst">$&#123;mdnsService.port&#125;</span>&quot;</span></span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> Update this when password can be passed as an argument</span></span><br><span class="line">    <span class="keyword">val</span> passwordInput = password + LineSeparator.getSystemLineSeparator().separatorString</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> Investigate updating (then using) ddmlib instead of spawning an adb client command, so that</span></span><br><span class="line">    <span class="comment">//       we don&#x27;t have to rely on parsing command line output</span></span><br><span class="line">    <span class="keyword">val</span> futureResult = adbService.executeCommand(listOf(<span class="string">&quot;pair&quot;</span>, deviceAddress), passwordInput)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> futureResult.transform(taskExecutor) &#123; result -&gt;</span><br><span class="line">    LOG.info(<span class="string">&quot;mDNS pairing exited with code <span class="subst">$&#123;result.errorCode&#125;</span>&quot;</span>)</span><br><span class="line">    result.stdout.take(<span class="number">5</span>).forEachIndexed &#123; index, line -&gt;</span><br><span class="line">        LOG.info(<span class="string">&quot;  stdout line #<span class="variable">$index</span>: <span class="variable">$line</span>&quot;</span>) &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (result.errorCode != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> AdbCommandException(<span class="string">&quot;Error pairing device&quot;</span>, result.errorCode, result.stderr)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (result.stdout.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">throw</span> AdbCommandException(<span class="string">&quot;Empty output from \&quot;adb pair\&quot; command&quot;</span>, -<span class="number">1</span>, result.stderr)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output example:</span></span><br><span class="line">    <span class="comment">//  Enter pairing code: Successfully paired to 192.168.1.86:41915 [guid=adb-939AX05XBZ-vWgJpq]</span></span><br><span class="line">    <span class="comment">// Regular expression</span></span><br><span class="line">    <span class="comment">//  &lt;Prefix&gt;&lt;everything-until-colon&gt;:&lt;port&gt;[guid=&lt;everything-until-close-bracket&gt;]</span></span><br><span class="line">    <span class="keyword">val</span> lineRegex = Regex(<span class="string">&quot;Successfully paired to ([^:]*):([0-9]*) \\[guid=([^\\]]*)\\]&quot;</span>)</span><br><span class="line">    <span class="keyword">val</span> matchResult = lineRegex.find(result.stdout[<span class="number">0</span>])</span><br><span class="line">    matchResult?.let &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> ipAddress = InetAddress.getByName(it.groupValues[<span class="number">1</span>])</span><br><span class="line">        <span class="keyword">val</span> port = it.groupValues[<span class="number">2</span>].toInt()</span><br><span class="line">        <span class="keyword">val</span> serviceGuid = it.groupValues[<span class="number">3</span>]</span><br><span class="line">        PairingResult(ipAddress, port, serviceGuid)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">        <span class="keyword">throw</span> InvalidDataException(<span class="string">&quot;Pairing result is invalid&quot;</span>, e)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; ?: <span class="keyword">throw</span> InvalidDataException(<span class="string">&quot;Pairing result is invalid&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 2.4 生成二维码的内容格式</p>
- <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Format is &quot;WIFI:T:ADB;S:service;P:password;;&quot; (without the quotes)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">createPairingString</span><span class="params">(service: <span class="type">String</span>, password:      <span class="type">String</span>)</span></span>: String &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;WIFI:T:ADB;S:<span class="subst">$&#123;service&#125;</span>;P:<span class="subst">$&#123;password&#125;</span>;;&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="用nodejs实现的命令行工具"><a href="#用nodejs实现的命令行工具" class="headerlink" title="用nodejs实现的命令行工具"></a>用nodejs实现的命令行工具</h2><ol>
-<li><a href="https://github.com/wanix1988/adb-wifi">adb-wifi2</a></li>
-</ol>
-
-	
-	</div>
-  <a type="button" href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2024/03/12/hello-world/" >Hello World</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2024-03-12
-			
-		</div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
-
-	
-	</div>
-  <a type="button" href="/2024/03/12/hello-world/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/12/04/Debug-Linux-Kernel-With-KGDB/" >Debug Linux Kernel With KGDB</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-12-04
-			
-		</div>
-		</div>
-	</div>
-	
+记下打印出的转发设备，比如/dev/pts/4  
+这个操作要在串口连接虚拟机前做，不然就会直接退出，连接不上了  
+控制台不要关闭
+如果没有权限连接/dev/pts/4，可以在gdb中执行下面的命令开启权限
+sudo chmod 777 /dev/pts/4
 
 
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="使用KGDB调试Linux-Kernel-20181114"><a href="#使用KGDB调试Linux-Kernel-20181114" class="headerlink" title="使用KGDB调试Linux Kernel(20181114)"></a>使用KGDB调试Linux Kernel(20181114)</h1><ol>
-<li><p>Grub启动命令行中添加kgdboc=ttyS0,115200 kgdbwait nokaslr<br>a) rodata=off   </p>
-<blockquote>
-<p>这条好像没什么用？待验证  </p>
-</blockquote>
-<p>b)必须添加nokaslr，否则vmlinux符号会对不上，无法正常显示debug信息和下断点</p>
-</li>
-<li>使用socat做转发<br>a) sudo socat -d -d /tmp/vboxsock PTY<blockquote>
-<ol>
-<li>记下打印出的转发设备，比如/dev/pts/4  </li>
-<li>这个操作要在串口连接虚拟机前做，不然就会直接退出，连接不上了  </li>
-<li>控制台不要关闭</li>
-<li>如果没有权限连接/dev/pts/4，可以在gdb中执行下面的命令开启权限<blockquote>
-<p>sudo chmod 777 /dev/pts/4</p>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-</li>
-<li>不要在start_kernel处下断点，因为kgdb在start_kernel执行后才初始化，所以不会在start_kernel断下来</li>
-<li>References   <ul>
-<li><a href="https://kgdb.wiki.kernel.org/index.php/Main_Page">https://kgdb.wiki.kernel.org/index.php/Main_Page</a></li>
-<li><a href="https://kernelnewbies.org/KernelHacking-HOWTO/Debugging_Kernel">https://kernelnewbies.org/KernelHacking-HOWTO/Debugging_Kernel</a></li>
-<li><a href="https://www.kernel.org/doc/htmldocs/kgdb/index.html">https://www.kernel.org/doc/htmldocs/kgdb/index.html</a></li>
-<li><a href="https://stackoverflow.com/questions/48539434/kgdb-and-gdb-over-serial-cable-cannot-set-breakpoints">https://stackoverflow.com/questions/48539434/kgdb-and-gdb-over-serial-cable-cannot-set-breakpoints</a></li>
-</ul>
-</li>
-</ol>
-
-	
-	</div>
-  <a type="button" href="/2018/12/04/Debug-Linux-Kernel-With-KGDB/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/11/13/debug-linux-kernel-with-virtualbox/" >debug_linux_kernel_with_virtualbox</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-11-13
-			
-		</div>
-		</div>
-	</div>
-	
 
 
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="使用VirtualBox搭建Linux-Kernel调试平台"><a href="#使用VirtualBox搭建Linux-Kernel调试平台" class="headerlink" title="使用VirtualBox搭建Linux Kernel调试平台"></a>使用VirtualBox搭建Linux Kernel调试平台</h1><h2 id="1-安装linux-source-uname-r"><a href="#1-安装linux-source-uname-r" class="headerlink" title="1.安装linux-source-$(uname -r)"></a>1.安装linux-source-$(uname -r)</h2><pre><code>a) 最好在Host上安装/编译，然后将linux-source目录挂载到虚拟机中安装，如果在虚拟机中安装和编译，会导致debug kernel的时候无法访问源码和symbols
+
+不要在start_kernel处下断点，因为kgdb在start_kernel执行后才初始化，所以不会在start_kernel断下来
+References   
+https://kgdb.wiki.kernel.org/index.php/Main_Page
+https://kernelnewbies. ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2018/11/13/debug-linux-kernel-with-virtualbox/" title="debug_linux_kernel_with_virtualbox">debug_linux_kernel_with_virtualbox</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2018-11-13T14:25:52.000Z" title="Created 2018-11-13 22:25:52">2018-11-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/kernel/">kernel</a></span></div><div class="content">使用VirtualBox搭建Linux Kernel调试平台1.安装linux-source-$(uname -r)a) 最好在Host上安装/编译，然后将linux-source目录挂载到虚拟机中安装，如果在虚拟机中安装和编译，会导致debug kernel的时候无法访问源码和symbols
 b) 如果/分区够大(free &gt; 30GB)，可以选择放在/usr/src目录下，否则找分区free空间较大的放置，防止空间不够
-</code></pre><h2 id="2-解压-usr-src-linux-source-uname-r-并修改相关目录权限"><a href="#2-解压-usr-src-linux-source-uname-r-并修改相关目录权限" class="headerlink" title="2.解压/usr/src/linux-source-$(uname -r),并修改相关目录权限"></a>2.解压/usr/src/linux-source-$(uname -r),并修改相关目录权限</h2><h2 id="3-使用make-oldconfig创建模板config"><a href="#3-使用make-oldconfig创建模板config" class="headerlink" title="3.使用make oldconfig创建模板config"></a>3.使用make oldconfig创建模板config</h2><h2 id="4-使用make-menuconfig客制化选项-gt-打开debug开关和所需其他功能"><a href="#4-使用make-menuconfig客制化选项-gt-打开debug开关和所需其他功能" class="headerlink" title="4.使用make menuconfig客制化选项 ==&gt; 打开debug开关和所需其他功能"></a>4.使用make menuconfig客制化选项 ==&gt; 打开debug开关和所需其他功能</h2><h2 id="5-make-j4-amp-amp-make-modules"><a href="#5-make-j4-amp-amp-make-modules" class="headerlink" title="5.make -j4 &amp;&amp; make modules"></a>5.make -j4 &amp;&amp; make modules</h2><h2 id="6-make-install-amp-amp-make-modules-install"><a href="#6-make-install-amp-amp-make-modules-install" class="headerlink" title="6.make install &amp;&amp; make modules_install"></a>6.make install &amp;&amp; make modules_install</h2><h2 id="7-sudo-mkinitramfs-4-15-0-o-boot-initrd-4-15-8"><a href="#7-sudo-mkinitramfs-4-15-0-o-boot-initrd-4-15-8" class="headerlink" title="7.sudo mkinitramfs 4.15.0 -o /boot/initrd-4.15.8"></a>7.sudo mkinitramfs 4.15.0 -o /boot/initrd-4.15.8</h2><pre><code>a) 这步必须要做，否则开机找不到initramfs会无法挂载/root
-</code></pre><h2 id="8-sudo-update-grub"><a href="#8-sudo-update-grub" class="headerlink" title="8.sudo update-grub"></a>8.sudo update-grub</h2><h2 id="9-设置VirtualBox的串口"><a href="#9-设置VirtualBox的串口" class="headerlink" title="9.设置VirtualBox的串口"></a>9.设置VirtualBox的串口</h2><pre><code>a) com1
-b) Host Pipe
-c) 不要勾选连接已有pipe/socket
-d) Path/Address填写/tmp/vboxsock (随便命名)
-</code></pre><h2 id="10-安装minicom"><a href="#10-安装minicom" class="headerlink" title="10.安装minicom"></a>10.安装minicom</h2><h2 id="11-配置minicom"><a href="#11-配置minicom" class="headerlink" title="11.配置minicom"></a>11.配置minicom</h2><pre><code>a) 串口名称unix#/tmp/vboxsock ==&gt;此处一定要记得加unix#前缀，否则连不上
-b) 115200n8
-c) 配置会写到~/.minirc中
-</code></pre><h2 id="12-Kgdb设置"><a href="#12-Kgdb设置" class="headerlink" title="12.Kgdb设置"></a>12.Kgdb设置</h2><pre><code>a) console=ttyS0,115200 kgdboc=ttyS0,115200 kgdbwait
-b) 启动内核后，在串口终端中，输入如下命令：
-    i.bash-3.2# echo g &gt; /proc/sysrq-trigger 
-        1.SysRq : DEBUG
-        2.Entering KGDB
-c) 建议开始时每次在启动时暂停grub，然后在kernel后输入上面command line参数后启动，避免修改grub相关文件导致的无法启动问题
-    d) 如果修改/boot/grub/grub.cfg，或者/etc/default/grub，或者/boot/grub/menu.lst等文件导致启动问题无法正常进入系统，可以在光驱中挂载livecd，然后进入后挂载/boot分区后修复即可，无需重装系统。
-</code></pre><h1 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h1><pre><code>1.Ubuntu 16.04.5 LTS使用Ubuntu18.04 LTS编译的linux-source-4.15.8执行make modules_install时报错: error while loading shared libraries: libssl.so.1.1 (and libcrypto.so.1.1)
-    a) 需要编译libopenssl-1.1.x版本替换1.0.0版本
-        ii.下载并解压源码：
-            1.wget https://www.openssl.org/source/openssl-1.1.1.tar.gz
-            2.tar -zxf openssl-1.1.1.tar.gz
-        iii.编译安装：
-            1.cd openssl-1.1.1
-            2../config
-            3.make install
-        iv.移除旧版本 Openssl：
-            1.mv /usr/bin/openssl /tmp/
-            2.ln -s /usr/local/bin/openssl /usr/bin/openssl
-        v.复制源码：
-            1.如果报错：openssl: error while loading shared libraries: libssl.so.1.1: cannot open shared object
-                a)cp libssl.so.1.1 /lib/x86_64-linux-gnu
-                b)libcrypto.so.1.1 /lib/x86_64-linux-gnu
-2.映射Host文件夹到虚拟机
-    a) 虚拟机中安装VirtualBox Guest Additional
-        i.sudo mount -t iso9660 /dev/cdrom /mnt/
-        ii.sudo /mnt/VBoxAdditional.sh
-    b) 在Share Folders中选择Host目录，并自动挂载文件夹
-        i.sudo mkdir /mnt/vboxshare
-        ii.sudo mount -t vboxsf Host文件夹名 /mnt/vboxshare
-            1.上面要使用Host文件夹名，否则使用share会报Protocol Error
-</code></pre>
-	
-	</div>
-  <a type="button" href="/2018/11/13/debug-linux-kernel-with-virtualbox/#more" class="btn btn-default more">Read More</a>
-</div>
+2.解压/usr/src/linux-source-$(uname -r),并修改相关目录权限3.使用make oldconfig创建模板config4.使用make menuconfig客制化选项 ==&gt; 打开debug开关和所需其他功能5.make -j4 &amp;&amp; make modules6.make install &amp;&amp; make modules_install7.sudo mkinitramfs 4.15.0 -o /boot/initrd-4.15.8a) 这步必须要做，否则开机找不到initramfs会无法挂载/ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2018/08/12/difference-between-stdcall-cdcel-fastcall/" title="difference_between___stdcall___cdcel___fastcall">difference_between___stdcall___cdcel___fastcall</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2018-08-12T14:51:13.000Z" title="Created 2018-08-12 22:51:13">2018-08-12</time></span></div><div class="content">stdcall、cdcel和__fastcall三者的区别stdcall、cdecl和__fastcall是三种函数调用协议，函数调用协议会影响函数参数的入栈方式、栈内数据的清除方式、编译器函数名的修饰规则等。
+调用协议常用场合
+__stdcall：Windows API默认的函数调用协议。
+__cdecl：C/C++默认的函数调用协议。
+__fastcall：适用于对性能要求较高的场合。
 
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/08/12/difference-between-stdcall-cdcel-fastcall/" >difference_between___stdcall___cdcel___fastcall</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-08-12
-			
-		</div>
-		</div>
-	</div>
-	
+函数参数入栈方式
+__stdcall：函数参数由右向左入栈。
+__cdecl：函数参数由右向左入栈。
+__fastcall：从左开始不大于4字节的参数放入CPU的ECX和EDX寄存器，其余参数从右向左入栈。
 
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="stdcall、cdcel和-fastcall三者的区别"><a href="#stdcall、cdcel和-fastcall三者的区别" class="headerlink" title="stdcall、cdcel和__fastcall三者的区别"></a><strong>stdcall、</strong>cdcel和__fastcall三者的区别</h1><p><strong>stdcall、</strong>cdecl和__fastcall是三种函数调用协议，函数调用协议会影响函数参数的入栈方式、栈内数据的清除方式、编译器函数名的修饰规则等。</p>
-<h2 id="调用协议常用场合"><a href="#调用协议常用场合" class="headerlink" title="调用协议常用场合"></a>调用协议常用场合</h2><ol>
-<li>__stdcall：Windows API默认的函数调用协议。</li>
-<li>__cdecl：C/C++默认的函数调用协议。</li>
-<li>__fastcall：适用于对性能要求较高的场合。</li>
-</ol>
-<h2 id="函数参数入栈方式"><a href="#函数参数入栈方式" class="headerlink" title="函数参数入栈方式"></a>函数参数入栈方式</h2><ol>
-<li>__stdcall：函数参数由右向左入栈。</li>
-<li>__cdecl：函数参数由右向左入栈。</li>
-<li>__fastcall：从左开始不大于4字节的参数放入CPU的ECX和EDX寄存器，其余参数从右向左入栈。</li>
-</ol>
-<p>问题一：__fastcall在寄存器中放入不大于4字节的参数，故性能较高，适用于需要高性能的场合。</p>
-<h2 id="栈内数据清除方式"><a href="#栈内数据清除方式" class="headerlink" title="栈内数据清除方式"></a>栈内数据清除方式</h2><ol>
-<li>__stdcall：函数调用结束后由被调用函数清除栈内数据。</li>
-<li>__cdecl：函数调用结束后由函数调用者清除栈内数据。</li>
-<li>__fastcall：函数调用结束后由被调用函数清除栈内数据。<blockquote>
-<p>问题一：不同编译器设定的栈结构不尽相同，跨开发平台时由函数调用者清除栈内数据不可行。</p>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p>问题二：某些函数的参数是可变的，如printf函数，这样的函数只能由函数调用者清除栈内数据。</p>
-</blockquote>
-<blockquote>
-<p>问题三：由调用者清除栈内数据时，每次调用都包含清除栈内数据的代码，故可执行文件较大。</p>
-</blockquote>
-<h2 id="C语言编译器函数名称修饰规则"><a href="#C语言编译器函数名称修饰规则" class="headerlink" title="C语言编译器函数名称修饰规则"></a>C语言编译器函数名称修饰规则</h2><ol>
-<li>__stdcall：编译后，函数名被修饰为“_functionname@number”。</li>
-<li>__cdecl：编译后，函数名被修饰为“_functionname”。</li>
-<li>__fastcall：编译后，函数名给修饰为“@functionname@nmuber”。</li>
-</ol>
-<blockquote>
-<p>注：“functionname”为函数名，“number”为参数字节数。</p>
-</blockquote>
-<blockquote>
-<p>注：函数实现和函数定义时如果使用了不同的函数调用协议，则无法实现函数调用。</p>
-</blockquote>
-<h2 id="C-语言编译器函数名称修饰规则"><a href="#C-语言编译器函数名称修饰规则" class="headerlink" title="C++语言编译器函数名称修饰规则"></a>C++语言编译器函数名称修饰规则</h2><ol>
-<li>__stdcall：编译后，函数名被修饰为“?functionname@@YG<strong>**</strong>@Z”。</li>
-<li>__cdecl：编译后，函数名被修饰为“?functionname@@YA<strong>**</strong>@Z”。</li>
-<li>__fastcall：编译后，函数名被修饰为“?functionname@@YI<strong>**</strong>@Z”。</li>
-</ol>
-<blockquote>
-<p>注：“<strong>**</strong>”为函数返回值类型和参数类型表。</p>
-</blockquote>
-<blockquote>
-<p>注：函数实现和函数定义时如果使用了不同的函数调用协议，则无法实现函数调用。</p>
-</blockquote>
-<p>C语言和C++语言间如果不进行特殊处理，也无法实现函数的互相调用。</p>
-
-	
-	</div>
-  <a type="button" href="/2018/08/12/difference-between-stdcall-cdcel-fastcall/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/06/12/Running-Arm64-Linux-Kernel-in-Qemu/" title="在Qemu上运行Arm64 Linux Kernel">Running Arm64 Linux Kernel in Qemu</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-06-12
-			
-		</div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="原由"><a href="#原由" class="headerlink" title="原由"></a>原由</h2><p>看了一下《奔跑吧Linux内核》这本书，决定好好研究一下ARM64平台，包括汇编和Linux Kernel相关的知识。网络上搜索到了之前他人搭建成功的帖子，自己照着做一遍却发现qemu启动后没有任何输出，查看进程占用率却非常高，感觉就是qemu cpu跑飞了。仔细思考后觉得问题一定出在编译器上面，所以下载了linaro提供的最新编译器，果然解决问题。下面把整个流程记录一下，方便后来人。</p>
-<h2 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h2><ol>
-<li>Ubuntu 18.04 LTS</li>
-<li>Qemu 2.11.1</li>
-<li><a href="https://releases.linaro.org/components/toolchain/binaries/latest/aarch64-linux-gnu/gcc-linaro-7.2.1-2017.11-x86_64_aarch64-linux-gnu.tar.xz">Linaro aarch64 linux toolchain</a></li>
-<li><a href="git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git">Linux Kernel Torvalds 4.7 or 4.17</a> </li>
-</ol>
-<h2 id="软件环境配置说明"><a href="#软件环境配置说明" class="headerlink" title="软件环境配置说明"></a>软件环境配置说明</h2><ol>
-<li>Ubuntu 16.04或者18.04应该都没问题，但是12.04或者14.04可能需要源码编译qemu（未验证）</li>
-<li>Qemu我尝试了source code build和直接通过<br><code>sudo apt install qemu-system-aarch64</code>来安装，都没有问题。source code build的时候都指明需要添加<code>--target-list=aarch64-softmmu</code>，我也有添加，但是没有不添加的测试结果。后面如果哪天不小心试验了就把结果补上。</li>
-<li>交叉编译器千万不要使用Ubuntu提供的，到上面linaro链接中下载最新的版本即可。 </li>
-<li>Linux Kernel版本我有试过4.7和4.17（今天的master branch，2018/06/12），都OK</li>
-<li>如果Ubuntu系统较新，编译时需要安装下面的包：</li>
-</ol>
-<ul>
-<li>libncurses5-dev – 用于<code>make menuconfig</code>时显示终端图形菜单，否则报错;</li>
-<li>libssl-dev – kernel中的scripts/extract-cert.c中的openssl头文件会无法找到，报错。</li>
-</ul>
-<ol start="6">
-<li>为了试验方便，暂未做initramfs。之前有download一份busybox，目前来看也需换编译器再重新build一遍为好。</li>
-</ol>
-<h2 id="Qemu运行命令"><a href="#Qemu运行命令" class="headerlink" title="Qemu运行命令"></a>Qemu运行命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-aarch64 \</span><br><span class="line">         -machine virt \</span><br><span class="line">         -cpu cortex-a57 \</span><br><span class="line">         -machine type=virt \</span><br><span class="line">         -nographic \</span><br><span class="line">         -m 2048 \</span><br><span class="line">         -smp 2 \ </span><br><span class="line">         -kernel arch/arm64/boot/Image \</span><br><span class="line">         --append &quot;rdinit=/linuxrc console=ttyAMA0&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br></pre></td><td class="code"><pre><span class="line">[    0.000000] Booting Linux on physical CPU 0x0</span><br><span class="line">[    0.000000] Linux version 4.9.0 (wenix@wenix-ThinkPad-X230-Tablet) (gcc version 7.2.1 20171011 (Linaro GCC 7.2-2017.11) ) #1 SMP PREEMPT Tue Jun 12 21:31:21 CST 2018</span><br><span class="line">[    0.000000] Boot CPU: AArch64 Processor [411fd070]</span><br><span class="line">[    0.000000] efi: Getting EFI parameters from FDT:</span><br><span class="line">[    0.000000] efi: UEFI not found.</span><br><span class="line">[    0.000000] cma: Reserved 16 MiB at 0x00000000bf000000</span><br><span class="line">[    0.000000] psci: probing for conduit method from DT.</span><br><span class="line">[    0.000000] psci: PSCIv0.2 detected in firmware.</span><br><span class="line">[    0.000000] psci: Using standard PSCI v0.2 function IDs</span><br><span class="line">[    0.000000] psci: Trusted OS migration not required</span><br><span class="line">[    0.000000] percpu: Embedded 21 pages/cpu @ffff80007efbf000 s47896 r8192 d29928 u86016</span><br><span class="line">[    0.000000] Detected PIPT I-cache on CPU0</span><br><span class="line">[    0.000000] CPU features: enabling workaround for ARM erratum 832075</span><br><span class="line">[    0.000000] CPU features: enabling workaround for ARM erratum 834220</span><br><span class="line">[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 516096</span><br><span class="line">[    0.000000] Kernel command line: rdinit=/linuxrc console=ttyAMA0</span><br><span class="line">[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)</span><br><span class="line">[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)</span><br><span class="line">[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)</span><br><span class="line">[    0.000000] Memory: 2032644K/2097152K available (7740K kernel code, 494K rwdata, 2744K rodata, 576K init, 271K bss, 48124K reserved, 16384K cma-reserved)</span><br><span class="line">[    0.000000] Virtual kernel memory layout:</span><br><span class="line">[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)</span><br><span class="line">[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)</span><br><span class="line">[    0.000000]       .text : 0xffff000008080000 - 0xffff000008810000   (  7744 KB)</span><br><span class="line">[    0.000000]     .rodata : 0xffff000008810000 - 0xffff000008ad0000   (  2816 KB)</span><br><span class="line">[    0.000000]       .init : 0xffff000008ad0000 - 0xffff000008b60000   (   576 KB)</span><br><span class="line">[    0.000000]       .data : 0xffff000008b60000 - 0xffff000008bdba00   (   495 KB)</span><br><span class="line">[    0.000000]        .bss : 0xffff000008bdba00 - 0xffff000008c1f734   (   272 KB)</span><br><span class="line">[    0.000000]     fixed   : 0xffff7dfffe7fd000 - 0xffff7dfffec00000   (  4108 KB)</span><br><span class="line">[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)</span><br><span class="line">[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)</span><br><span class="line">[    0.000000]               0xffff7e0000000000 - 0xffff7e0002000000   (    32 MB actual)</span><br><span class="line">[    0.000000]     memory  : 0xffff800000000000 - 0xffff800080000000   (  2048 MB)</span><br><span class="line">[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1</span><br><span class="line">[    0.000000] Preemptible hierarchical RCU implementation.</span><br><span class="line">[    0.000000] 	Build-time adjustment of leaf fanout to 64.</span><br><span class="line">[    0.000000] 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=2.</span><br><span class="line">[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=2</span><br><span class="line">[    0.000000] NR_IRQS:64 nr_irqs:64 0</span><br><span class="line">[    0.000000] GICv2m: range[mem 0x08020000-0x08020fff], SPI[80:143]</span><br><span class="line">[    0.000000] arm_arch_timer: Architected cp15 timer(s) running at 62.50MHz (virt).</span><br><span class="line">[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1cd42e208c, max_idle_ns: 881590405314 ns</span><br><span class="line">[    0.000154] sched_clock: 56 bits at 62MHz, resolution 16ns, wraps every 4398046511096ns</span><br><span class="line">[    0.006170] Console: colour dummy device 80x25</span><br><span class="line">[    0.008012] Calibrating delay loop (skipped), value calculated using timer frequency.. 125.00 BogoMIPS (lpj=250000)</span><br><span class="line">[    0.008295] pid_max: default: 32768 minimum: 301</span><br><span class="line">[    0.009475] Security Framework initialized</span><br><span class="line">[    0.009960] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)</span><br><span class="line">[    0.009999] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)</span><br><span class="line">[    0.033277] ASID allocator initialised with 65536 entries</span><br><span class="line">[    0.066997] EFI services will not be available.</span><br><span class="line">[    0.120844] Detected PIPT I-cache on CPU1</span><br><span class="line">[    0.122607] CPU1: Booted secondary processor [411fd070]</span><br><span class="line">[    0.131049] Brought up 2 CPUs</span><br><span class="line">[    0.131190] SMP: Total of 2 processors activated.</span><br><span class="line">[    0.131388] CPU features: detected feature: 32-bit EL0 Support</span><br><span class="line">[    0.133999] CPU: All CPU(s) started at EL1</span><br><span class="line">[    0.135370] alternatives: patching kernel code</span><br><span class="line">[    0.154940] devtmpfs: initialized</span><br><span class="line">[    0.172605] DMI not present or invalid.</span><br><span class="line">[    0.176170] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns</span><br><span class="line">[    0.221075] NET: Registered protocol family 16</span><br><span class="line">[    0.260407] cpuidle: using governor menu</span><br><span class="line">[    0.261303] vdso: 2 pages (1 code @ ffff000008817000, 1 data @ ffff000008b64000)</span><br><span class="line">[    0.261679] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.</span><br><span class="line">[    0.271773] DMA: preallocated 256 KiB pool for atomic allocations</span><br><span class="line">[    0.273033] Serial: AMBA PL011 UART driver</span><br><span class="line">[    0.335144] 9000000.pl011: ttyAMA0 at MMIO 0x9000000 (irq = 39, base_baud = 0) is a PL011 rev1</span><br><span class="line">[    0.349070] console [ttyAMA0] enabled</span><br><span class="line">[    0.567544] HugeTLB registered 2 MB page size, pre-allocated 0 pages</span><br><span class="line">[    0.582343] ACPI: Interpreter disabled.</span><br><span class="line">[    0.592095] vgaarb: loaded</span><br><span class="line">[    0.597022] SCSI subsystem initialized</span><br><span class="line">[    0.606885] usbcore: registered new interface driver usbfs</span><br><span class="line">[    0.610791] usbcore: registered new interface driver hub</span><br><span class="line">[    0.612937] usbcore: registered new device driver usb</span><br><span class="line">[    0.618796] pps_core: LinuxPPS API ver. 1 registered</span><br><span class="line">[    0.619127] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti &lt;giometti@linux.it&gt;</span><br><span class="line">[    0.620351] PTP clock support registered</span><br><span class="line">[    0.627272] dmi: Firmware registration failed.</span><br><span class="line">[    0.631976] Advanced Linux Sound Architecture Driver Initialized.</span><br><span class="line">[    0.645917] clocksource: Switched to clocksource arch_sys_counter</span><br><span class="line">[    0.651591] VFS: Disk quotas dquot_6.6.0</span><br><span class="line">[    0.652217] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)</span><br><span class="line">[    0.658270] pnp: PnP ACPI: disabled</span><br><span class="line">[    0.767641] NET: Registered protocol family 2</span><br><span class="line">[    0.776560] TCP established hash table entries: 16384 (order: 5, 131072 bytes)</span><br><span class="line">[    0.777303] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)</span><br><span class="line">[    0.778647] TCP: Hash tables configured (established 16384 bind 16384)</span><br><span class="line">[    0.780489] UDP hash table entries: 1024 (order: 3, 32768 bytes)</span><br><span class="line">[    0.781007] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)</span><br><span class="line">[    0.785364] NET: Registered protocol family 1</span><br><span class="line">[    0.799807] RPC: Registered named UNIX socket transport module.</span><br><span class="line">[    0.800128] RPC: Registered udp transport module.</span><br><span class="line">[    0.800353] RPC: Registered tcp transport module.</span><br><span class="line">[    0.800551] RPC: Registered tcp NFSv4.1 backchannel transport module.</span><br><span class="line">[    0.811081] hw perfevents: enabled with armv8_pmuv3 PMU driver, 1 counters available</span><br><span class="line">[    0.813225] kvm [1]: HYP mode not available</span><br><span class="line">[    0.836878] futex hash table entries: 512 (order: 4, 65536 bytes)</span><br><span class="line">[    0.838616] audit: initializing netlink subsys (disabled)</span><br><span class="line">[    0.839971] audit: type=2000 audit(0.788:1): initialized</span><br><span class="line">[    0.847568] workingset: timestamp_bits=46 max_order=19 bucket_order=0</span><br><span class="line">[    0.969082] squashfs: version 4.0 (2009/01/31) Phillip Lougher</span><br><span class="line">[    0.979427] NFS: Registering the id_resolver key type</span><br><span class="line">[    0.980928] Key type id_resolver registered</span><br><span class="line">[    0.981684] Key type id_legacy registered</span><br><span class="line">[    0.982464] nfs4filelayout_init: NFSv4 File Layout Driver Registering...</span><br><span class="line">[    0.986105] 9p: Installing v9fs 9p2000 file system support</span><br><span class="line">[    1.007251] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)</span><br><span class="line">[    1.008184] io scheduler noop registered</span><br><span class="line">[    1.012464] io scheduler cfq registered (default)</span><br><span class="line">[    1.028667] pl061_gpio 9030000.pl061: PL061 GPIO chip @0x0000000009030000 registered</span><br><span class="line">[    1.034893] OF: PCI: host bridge /pcie@10000000 ranges:</span><br><span class="line">[    1.036393] OF: PCI:    IO 0x3eff0000..0x3effffff -&gt; 0x00000000</span><br><span class="line">[    1.037551] OF: PCI:   MEM 0x10000000..0x3efeffff -&gt; 0x10000000</span><br><span class="line">[    1.038668] OF: PCI:   MEM 0x8000000000..0xffffffffff -&gt; 0x8000000000</span><br><span class="line">[    1.040862] pci-host-generic 3f000000.pcie: ECAM at [mem 0x3f000000-0x3fffffff] for [bus 00-0f]</span><br><span class="line">[    1.043966] pci-host-generic 3f000000.pcie: PCI host bridge to bus 0000:00</span><br><span class="line">[    1.044717] pci_bus 0000:00: root bus resource [bus 00-0f]</span><br><span class="line">[    1.046480] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]</span><br><span class="line">[    1.047091] pci_bus 0000:00: root bus resource [mem 0x10000000-0x3efeffff]</span><br><span class="line">[    1.047328] pci_bus 0000:00: root bus resource [mem 0x8000000000-0xffffffffff]</span><br><span class="line">[    1.060800] pci 0000:00:01.0: BAR 6: assigned [mem 0x10000000-0x1007ffff pref]</span><br><span class="line">[    1.061606] pci 0000:00:01.0: BAR 4: assigned [mem 0x8000000000-0x8000003fff 64bit pref]</span><br><span class="line">[    1.063233] pci 0000:00:01.0: BAR 1: assigned [mem 0x10080000-0x10080fff]</span><br><span class="line">[    1.063500] pci 0000:00:01.0: BAR 0: assigned [io  0x1000-0x101f]</span><br><span class="line">[    1.093103] virtio-pci 0000:00:01.0: enabling device (0000 -&gt; 0003)</span><br><span class="line">[    1.099730] xenfs: not registering filesystem on non-xen platform</span><br><span class="line">[    1.156174] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled</span><br><span class="line">[    1.175144] Unable to detect cache hierarchy from DT for CPU 0</span><br><span class="line">[    1.225263] loop: module loaded</span><br><span class="line">[    1.232529] hisi_sas: driver version v1.6</span><br><span class="line">[    1.249489] libphy: Fixed MDIO Bus: probed</span><br><span class="line">[    1.256540] tun: Universal TUN/TAP device driver, 1.6</span><br><span class="line">[    1.256836] tun: (C) 1999-2004 Max Krasnyansky &lt;maxk@qualcomm.com&gt;</span><br><span class="line">[    1.281267] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k</span><br><span class="line">[    1.282430] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.</span><br><span class="line">[    1.284398] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k</span><br><span class="line">[    1.284919] igb: Copyright (c) 2007-2014 Intel Corporation.</span><br><span class="line">[    1.287458] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k</span><br><span class="line">[    1.287846] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.</span><br><span class="line">[    1.289391] sky2: driver version 1.30</span><br><span class="line">[    1.296439] VFIO - User Level meta-driver version: 0.3</span><br><span class="line">[    1.311934] ehci_hcd: USB 2.0 &#x27;Enhanced&#x27; Host Controller (EHCI) Driver</span><br><span class="line">[    1.312653] ehci-pci: EHCI PCI platform driver</span><br><span class="line">[    1.313626] ehci-platform: EHCI generic platform driver</span><br><span class="line">[    1.316055] ohci_hcd: USB 1.1 &#x27;Open&#x27; Host Controller (OHCI) Driver</span><br><span class="line">[    1.316631] ohci-pci: OHCI PCI platform driver</span><br><span class="line">[    1.319698] ohci-platform: OHCI generic platform driver</span><br><span class="line">[    1.324997] usbcore: registered new interface driver usb-storage</span><br><span class="line">[    1.339686] mousedev: PS/2 mouse device common for all mice</span><br><span class="line">[    1.352956] rtc-pl031 9010000.pl031: rtc core: registered pl031 as rtc0</span><br><span class="line">[    1.356558] i2c /dev entries driver</span><br><span class="line">[    1.372128] sdhci: Secure Digital Host Controller Interface driver</span><br><span class="line">[    1.372477] sdhci: Copyright(c) Pierre Ossman</span><br><span class="line">[    1.374906] Synopsys Designware Multimedia Card Interface Driver</span><br><span class="line">[    1.379711] sdhci-pltfm: SDHCI platform and OF driver helper</span><br><span class="line">[    1.383049] ledtrig-cpu: registered to indicate activity on CPUs</span><br><span class="line">[    1.395135] usbcore: registered new interface driver usbhid</span><br><span class="line">[    1.395452] usbhid: USB HID core driver</span><br><span class="line">[    1.408814] NET: Registered protocol family 17</span><br><span class="line">[    1.412004] 9pnet: Installing 9P2000 support</span><br><span class="line">[    1.413164] Key type dns_resolver registered</span><br><span class="line">[    1.420484] registered taskstats version 1</span><br><span class="line">[    1.431403] input: gpio-keys as /devices/platform/gpio-keys/input/input0</span><br><span class="line">[    1.437461] rtc-pl031 9010000.pl031: setting system clock to 2018-06-12 14:49:36 UTC (1528814976)</span><br><span class="line">[    1.440137] ALSA device list:</span><br><span class="line">[    1.440420]   No soundcards found.</span><br><span class="line">[    1.447909] uart-pl011 9000000.pl011: no DMA platform data</span><br><span class="line">[    1.454875] VFS: Cannot open root device &quot;(null)&quot; or unknown-block(0,0): error -6</span><br><span class="line">[    1.455145] Please append a correct &quot;root=&quot; boot option; here are the available partitions:</span><br><span class="line">[    1.455914] Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)</span><br><span class="line">[    1.457050] CPU: 1 PID: 1 Comm: swapper/0 Not tainted 4.9.0 #1</span><br><span class="line">[    1.457405] Hardware name: linux,dummy-virt (DT)</span><br><span class="line">[    1.457952] Call trace:</span><br><span class="line">[    1.459510] [&lt;ffff0000080884b0&gt;] dump_backtrace+0x0/0x1b0</span><br><span class="line">[    1.459943] [&lt;ffff000008088674&gt;] show_stack+0x14/0x20</span><br><span class="line">[    1.460185] [&lt;ffff00000837b218&gt;] dump_stack+0x94/0xb4</span><br><span class="line">[    1.460405] [&lt;ffff00000816630c&gt;] panic+0x118/0x288</span><br><span class="line">[    1.460599] [&lt;ffff000008ad1144&gt;] mount_block_root+0x19c/0x270</span><br><span class="line">[    1.460797] [&lt;ffff000008ad1334&gt;] mount_root+0x11c/0x134</span><br><span class="line">[    1.460980] [&lt;ffff000008ad1484&gt;] prepare_namespace+0x138/0x180</span><br><span class="line">[    1.461186] [&lt;ffff000008ad0d68&gt;] kernel_init_freeable+0x22c/0x250</span><br><span class="line">[    1.461406] [&lt;ffff0000087f9800&gt;] kernel_init+0x10/0x100</span><br><span class="line">[    1.461596] [&lt;ffff000008082e80&gt;] ret_from_fork+0x10/0x50</span><br><span class="line">[    1.462511] SMP: stopping secondary CPUs</span><br><span class="line">[    1.463121] Kernel Offset: disabled</span><br><span class="line">[    1.463866] Memory Limit: none</span><br><span class="line">[    1.464458] ---[ end Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C-a h    print this help</span><br><span class="line"></span><br><span class="line">C-a x    exit emulator</span><br><span class="line"></span><br><span class="line">C-a s    save disk data back to file (if -snapshot)</span><br><span class="line"></span><br><span class="line">C-a t    toggle console timestamps</span><br><span class="line"></span><br><span class="line">C-a b    send break (magic sysrq)</span><br><span class="line"></span><br><span class="line">C-a c    switch between console and monitor</span><br><span class="line"></span><br><span class="line">C-a C-a  sends C-a</span><br><span class="line"></span><br><span class="line">QEMU: Terminated</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-	
-	</div>
-  <a type="button" href="/2018/06/12/Running-Arm64-Linux-Kernel-in-Qemu/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-
-		</div>
-
-		<!-- pagination -->
-		<div>
-  		<center>
-		<div class="pagination">
-
-   
-</div>
-
-  		</center>
-		</div>
-
-		
-		
-	</div> <!-- col-md-9 -->
-
-	
-		<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
-
-
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/Android/">Android<span>1</span></a></li>
-		
-			<li><a href="/categories/kernel/">kernel<span>3</span></a></li>
-		
-		</ul>
-	</div>
-
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/C-C/">C/C++<span>1</span></a></li>
-		
-			<li><a href="/tags/debug-linux-kernel-kgdbkdb/">debug,linux,kernel,kgdbkdb<span>1</span></a></li>
-		
-			<li><a href="/tags/kernel/">kernel<span>1</span></a></li>
-		
-			<li><a href="/tags/debug-linux-kernel-virtualbox-kgdb-serial/">debug,linux,kernel,virtualbox,kgdb,serial<span>1</span></a></li>
-		
-			<li><a href="/tags/Android-adb-Wi-Fi-Pairing/">Android,adb,Wi-Fi,Pairing<span>1</span></a></li>
-		
-		 
-		</ul>
-	</div>
-
-
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/" ><i class="fa fa-file-o"></i>Pairing devices over Wi-Fi ...</a>
-      </li>
-    
-      <li>
-        <a href="/2024/03/12/hello-world/" ><i class="fa fa-file-o"></i>Hello World</a>
-      </li>
-    
-      <li>
-        <a href="/2018/12/04/Debug-Linux-Kernel-With-KGDB/" ><i class="fa fa-file-o"></i>Debug Linux Kernel With KGDB</a>
-      </li>
-    
-      <li>
-        <a href="/2018/11/13/debug-linux-kernel-with-virtualbox/" ><i class="fa fa-file-o"></i>debug_linux_kernel_with_vir...</a>
-      </li>
-    
-      <li>
-        <a href="/2018/08/12/difference-between-stdcall-cdcel-fastcall/" ><i class="fa fa-file-o"></i>difference_between___stdcal...</a>
-      </li>
-    
-  </ul>
-</div>
-
-		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/hexo-theme-freemind" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386's Github repository." target="_blank"]);">BOOTSTRA.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386's Github repository." target="_blank"]);">Freemind.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/wanix1988" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-		<li><i class="fa fa-twitter"></i><a href="https://twitter.com/wanglinwei88" title="My Twitter account." target="_blank"]);">My Twitter</a></li>
-	
-	</ul>
-</div>
-
-
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
-
-	
-	
-</div> <!-- row-fluid -->
-	</div>
-  </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2024 wanix1988
-  
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
-     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>. 
-     <p>
-      
-      <!-- 不蒜子统计 -->
-      <span id="busuanzi_container_site_pv">
-              本站总访问量<span id="busuanzi_value_site_pv"></span>次
-      </span>
-      <span class="post-meta-divider">|</span>
-      <span id="busuanzi_container_site_uv" style='display:none'>
-              本站访客数<span id="busuanzi_value_site_uv"></span>人
-      </span>
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      
-    </p>
-</p>
-
- </footer>
-</div> <!-- container-narrow -->
-  
-
-
-  
-<a id="gotop" href="#">   
-  <span>⬆︎TOP</span>
-</a>
-
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+问题一：__fastcall在寄存器中放入不大于4字节的参数，故性能较高，适用于需要高性能的场合。
+栈内数据清除方式
+__stdcall：函数调用结束后由被调用函数清除栈内数据。
+__cdecl：函数调用结束后由函数调用者清除栈内数据。
+__fastcall：函数调用结束后由被调用函数清除栈内数据。
+问题一：不同编译器设定的栈结构不尽相同，跨开发平台时由函数调用者清除栈内数据不可行。
 
 
 
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2018/06/12/Running-Arm64-Linux-Kernel-in-Qemu/" title="Running Arm64 Linux Kernel in Qemu">Running Arm64 Linux Kernel in Qemu</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2018-06-12T13:44:16.000Z" title="Created 2018-06-12 21:44:16">2018-06-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/kernel/">kernel</a></span></div><div class="content">原由看了一下《奔跑吧Linux内核》这本书，决定好好研究一下ARM64平台，包括汇编和Linux Kernel相关的知识。网络上搜索到了之前他人搭建成功的帖子，自己照着做一遍却发现qemu启动后没有任何输出，查看进程占用率却非常高，感觉就是qemu cpu跑飞了。仔细思考后觉得问题一定出在编译器上面，所以下载了linaro提供的最新编译器，果然解决问题。下面把整个流程记录一下，方便后来人。
+软件环境
+Ubuntu 18.04 LTS
+Qemu 2.11.1
+Linaro aarch64 linux toolchain
+Linux Kernel Torvalds 4.7 or 4.17 
 
-</body>
-   </html>
+软件环境配置说明
+Ubuntu 16.04或者18.04应该都没问题，但是12.04或者14.04可能需要源码编译qemu（未验证）
+Qemu我尝试了source code build和直接通过sudo apt install qemu-system-aarch64来安装，都没有问题。source code build的时候都指明需要添加--target-list=aarch64-softmmu，我也 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">wanix1988</div><div class="author-info__description">Wanglinwei's Blog</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" href="https://github.com/wanix1988"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wanix1988" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:wanix1988@gmail.com" target="_blank" title="Email"><i class="fab fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://twitter.com/wanglinwei88" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">雁过留痕</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/" title="Pairing devices over Wi-Fi in Android">Pairing devices over Wi-Fi in Android</a><time datetime="2024-03-17T12:36:44.000Z" title="Created 2024-03-17 20:36:44">2024-03-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/12/hello-world/" title="Hello World">Hello World</a><time datetime="2024-03-12T04:56:08.308Z" title="Created 2024-03-12 12:56:08">2024-03-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2018/12/04/Debug-Linux-Kernel-With-KGDB/" title="Debug Linux Kernel With KGDB">Debug Linux Kernel With KGDB</a><time datetime="2018-12-04T03:30:00.000Z" title="Created 2018-12-04 11:30:00">2018-12-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2018/11/13/debug-linux-kernel-with-virtualbox/" title="debug_linux_kernel_with_virtualbox">debug_linux_kernel_with_virtualbox</a><time datetime="2018-11-13T14:25:52.000Z" title="Created 2018-11-13 22:25:52">2018-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2018/08/12/difference-between-stdcall-cdcel-fastcall/" title="difference_between___stdcall___cdcel___fastcall">difference_between___stdcall___cdcel___fastcall</a><time datetime="2018-08-12T14:51:13.000Z" title="Created 2018-08-12 22:51:13">2018-08-12</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Android/"><span class="card-category-list-name">Android</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/kernel/"><span class="card-category-list-name">kernel</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/kernel/" style="font-size: 1.1em; color: #999">kernel</a> <a href="/tags/Android-adb-Wi-Fi-Pairing/" style="font-size: 1.1em; color: #999">Android,adb,Wi-Fi,Pairing</a> <a href="/tags/debug-linux-kernel-virtualbox-kgdb-serial/" style="font-size: 1.1em; color: #999">debug,linux,kernel,virtualbox,kgdb,serial</a> <a href="/tags/C-C/" style="font-size: 1.1em; color: #999">C/C++</a> <a href="/tags/debug-linux-kernel-kgdbkdb/" style="font-size: 1.1em; color: #999">debug,linux,kernel,kgdbkdb</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/12/"><span class="card-archive-list-date">December 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/11/"><span class="card-archive-list-date">November 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/08/"><span class="card-archive-list-date">August 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/06/"><span class="card-archive-list-date">June 2018</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">4.8k</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-23T05:44:55.127Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 By wanix1988</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">过去多少快乐记忆, 何妨与你一起去追</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><div id="doraemon_to_top"><img alt="doraemon_to_top" onclick="fly_to_top()" src="<FilePath_图片>"></div><script src="/js/my.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
