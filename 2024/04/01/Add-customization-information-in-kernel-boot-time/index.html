@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Add customization information in kernel boot time | SmallTalk</title><meta name="author" content="wanix1988"><meta name="copyright" content="wanix1988"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="添加自定义启动信息12345678910111213141516171819202122diff --git a&#x2F;init&#x2F;main.c b&#x2F;init&#x2F;main.cindex 9e6ab6d593bd..24f915fa4bb6 100644--- a&#x2F;init&#x2F;main.c+++ b&#x2F;init&#x2F;main.c@@ -874,6 +874,8 @@ static void __init print">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Add customization information in kernel boot time">
+<meta property="og:url" content="https://wanix1988.github.io/2024/04/01/Add-customization-information-in-kernel-boot-time/index.html">
+<meta property="og:site_name" content="SmallTalk">
+<meta property="og:description" content="添加自定义启动信息12345678910111213141516171819202122diff --git a&#x2F;init&#x2F;main.c b&#x2F;init&#x2F;main.cindex 9e6ab6d593bd..24f915fa4bb6 100644--- a&#x2F;init&#x2F;main.c+++ b&#x2F;init&#x2F;main.c@@ -874,6 +874,8 @@ static void __init print">
+<meta property="og:locale">
+<meta property="og:image" content="https://wanix1988.github.io/img/pexels-photomix-company-96627.jpg">
+<meta property="article:published_time" content="2024-04-01T14:18:08.000Z">
+<meta property="article:modified_time" content="2024-04-01T14:19:19.265Z">
+<meta property="article:author" content="wanix1988">
+<meta property="article:tag" content="kernel,boot,banner,log">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wanix1988.github.io/img/pexels-photomix-company-96627.jpg"><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://wanix1988.github.io/2024/04/01/Add-customization-information-in-kernel-boot-time/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Add customization information in kernel boot time',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-01 22:19:19'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="SmallTalk" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/pexels-photomix-company-96627.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="SmallTalk"><img class="site-icon" src="/img/avatar.png"/><span class="site-name">SmallTalk</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Add customization information in kernel boot time</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-04-01T14:18:08.000Z" title="Created 2024-04-01 22:18:08">2024-04-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-04-01T14:19:19.265Z" title="Updated 2024-04-01 22:19:19">2024-04-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">229</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>1mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Add customization information in kernel boot time"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a name="QAN2Z"></a></p>
+<h1 id="添加自定义启动信息"><a href="#添加自定义启动信息" class="headerlink" title="添加自定义启动信息"></a>添加自定义启动信息</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/init/main.c b/init/main.c</span><br><span class="line">index <span class="number">9e6</span>ab6d593bd.<span class="number">.24</span>f915fa4bb6 <span class="number">100644</span></span><br><span class="line">--- a/init/main.c</span><br><span class="line">+++ b/init/main.c</span><br><span class="line">@@ <span class="number">-874</span>,<span class="number">6</span> +<span class="number">874</span>,<span class="number">8</span> @@ <span class="type">static</span> <span class="type">void</span> __init <span class="title function_">print_unknown_bootoptions</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line"> asmlinkage __visible __init __no_sanitize_address __noreturn __no_stack_protector</span><br><span class="line"> <span class="type">void</span> <span class="title function_">start_kernel</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line"> &#123;</span><br><span class="line">+       <span class="type">const</span> <span class="type">char</span> *custom_banner = <span class="string">&quot;Welcome to rpi/Linux compiled by wanix1988&quot;</span>;</span><br><span class="line">+</span><br><span class="line">        <span class="type">char</span> *command_line;</span><br><span class="line">        <span class="type">char</span> *after_dashes;</span><br><span class="line"> </span><br><span class="line">@@ <span class="number">-893</span>,<span class="number">6</span> +<span class="number">895</span>,<span class="number">8</span> @@ <span class="type">void</span> <span class="title function_">start_kernel</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">         */</span><br><span class="line">        <span class="title function_">boot_cpu_init</span><span class="params">()</span>;</span><br><span class="line">        page_address_init();</span><br><span class="line">+</span><br><span class="line">+       pr_notice(<span class="string">&quot;%s&quot;</span>, custom_banner);</span><br><span class="line">        pr_notice(<span class="string">&quot;%s&quot;</span>, linux_banner);</span><br><span class="line">        early_security_init();</span><br><span class="line">        setup_arch(&amp;command_line);</span><br></pre></td></tr></table></figure>
+<p><a name="aD0q6"></a></p>
+<h1 id="编译生成Image"><a href="#编译生成Image" class="headerlink" title="编译生成Image"></a>编译生成Image</h1><p>build&gt; time  make -j8 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- Image<br />  CALL    scripts/checksyscalls.sh<br />  CC      init/main.o<br />  AR      init/built-in.a<br />  AR      built-in.a<br />  AR      vmlinux.a<br />  LD      vmlinux.o<br />  OBJCOPY modules.builtin.modinfo<br />  GEN     modules.builtin<br />  GEN     .vmlinux.objs<br />  MODPOST vmlinux.symvers<br />  UPD     include/generated/utsversion.h<br />  CC      init/version-timestamp.o<br />  LD      .tmp_vmlinux.kallsyms1<br />  NM      .tmp_vmlinux.kallsyms1.syms<br />  KSYMS   .tmp_vmlinux.kallsyms1.S<br />  AS      .tmp_vmlinux.kallsyms1.S<br />  LD      .tmp_vmlinux.kallsyms2<br />  NM      .tmp_vmlinux.kallsyms2.syms<br />  KSYMS   .tmp_vmlinux.kallsyms2.S<br />  AS      .tmp_vmlinux.kallsyms2.S<br />  LD      vmlinux<br />  NM      System.map<br />  SORTTAB vmlinux<br />  OBJCOPY arch/arm64/boot/Image<br />make -j8 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- Image  138.45s user 46.13s system 268% cpu 1:08.80 total<br><a name="kp3gn"></a></p>
+<h1 id="替换rpi中的Image"><a href="#替换rpi中的Image" class="headerlink" title="替换rpi中的Image"></a>替换rpi中的Image</h1><blockquote>
+<p>替换/boot/firmware/kernel8.img</p>
+</blockquote>
+<p><a name="rn2Fb"></a></p>
+<h1 id="重启抓取dmesg"><a href="#重启抓取dmesg" class="headerlink" title="重启抓取dmesg"></a>重启抓取dmesg</h1><p>log<a href="https://www.yuque.com/attachments/yuque/0/2024/txt/42488629/1711979554289-a1f69ba3-b7df-4113-acb4-28f20e8f1811.txt">dmesg.txt</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://wanix1988.github.io">wanix1988</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://wanix1988.github.io/2024/04/01/Add-customization-information-in-kernel-boot-time/">https://wanix1988.github.io/2024/04/01/Add-customization-information-in-kernel-boot-time/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/kernel-boot-banner-log/">kernel,boot,banner,log</a></div><div class="post_share"><div class="social-share" data-image="/img/pexels-photomix-company-96627.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/" title="Pairing devices over Wi-Fi in Android"><img class="cover" src="/img/pexels-photomix-company-96627.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">Pairing devices over Wi-Fi in Android</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">wanix1988</div><div class="author-info__description">Wanglinwei's Blog</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" href="https://github.com/wanix1988"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wanix1988" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:wanix1988@gmail.com" target="_blank" title="Email"><i class="fab fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://twitter.com/wanglinwei88" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">雁过留痕</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%90%AF%E5%8A%A8%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">添加自定义启动信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90Image"><span class="toc-number">2.</span> <span class="toc-text">编译生成Image</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2rpi%E4%B8%AD%E7%9A%84Image"><span class="toc-number">3.</span> <span class="toc-text">替换rpi中的Image</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E5%90%AF%E6%8A%93%E5%8F%96dmesg"><span class="toc-number">4.</span> <span class="toc-text">重启抓取dmesg</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/04/01/Add-customization-information-in-kernel-boot-time/" title="Add customization information in kernel boot time"><img src="/img/pexels-photomix-company-96627.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Add customization information in kernel boot time"/></a><div class="content"><a class="title" href="/2024/04/01/Add-customization-information-in-kernel-boot-time/" title="Add customization information in kernel boot time">Add customization information in kernel boot time</a><time datetime="2024-04-01T14:18:08.000Z" title="Created 2024-04-01 22:18:08">2024-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/" title="Pairing devices over Wi-Fi in Android"><img src="/img/pexels-photomix-company-96627.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pairing devices over Wi-Fi in Android"/></a><div class="content"><a class="title" href="/2024/03/17/Pairing-devices-over-Wi-Fi-in-Android/" title="Pairing devices over Wi-Fi in Android">Pairing devices over Wi-Fi in Android</a><time datetime="2024-03-17T12:36:44.000Z" title="Created 2024-03-17 20:36:44">2024-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/12/hello-world/" title="Hello World"><img src="/img/pexels-pixabay-259915.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/03/12/hello-world/" title="Hello World">Hello World</a><time datetime="2024-03-12T04:56:08.308Z" title="Created 2024-03-12 12:56:08">2024-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/12/04/Debug-Linux-Kernel-With-KGDB/" title="Debug Linux Kernel With KGDB"><img src="/img/pexels-pixabay-531880.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Debug Linux Kernel With KGDB"/></a><div class="content"><a class="title" href="/2018/12/04/Debug-Linux-Kernel-With-KGDB/" title="Debug Linux Kernel With KGDB">Debug Linux Kernel With KGDB</a><time datetime="2018-12-04T03:30:00.000Z" title="Created 2018-12-04 11:30:00">2018-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/11/13/debug-linux-kernel-with-virtualbox/" title="debug_linux_kernel_with_virtualbox"><img src="/img/pexels-photomix-company-96627.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="debug_linux_kernel_with_virtualbox"/></a><div class="content"><a class="title" href="/2018/11/13/debug-linux-kernel-with-virtualbox/" title="debug_linux_kernel_with_virtualbox">debug_linux_kernel_with_virtualbox</a><time datetime="2018-11-13T14:25:52.000Z" title="Created 2018-11-13 22:25:52">2018-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 By wanix1988</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">过去多少快乐记忆, 何妨与你一起去追</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><div id="doraemon_to_top"><img alt="doraemon_to_top" onclick="fly_to_top()" src="<FilePath_图片>"></div><script src="/js/my.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
